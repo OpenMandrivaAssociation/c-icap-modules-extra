@@ -3,7 +3,7 @@
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
 Version:	0.1.1
-Release:	%mkrel 0.pre2.1
+Release:	%mkrel 0.pre2.2
 License:	GPL
 Group:		System/Servers
 URL:		http://sourceforge.net/projects/c-icap/
@@ -57,8 +57,8 @@ export LIBS="-lpthread -ldl"
 %install
 rm -rf %{buildroot}
 
-%{__mkdir_p} %{buildroot}/%{_sysconfdir}
-%makeinstall_std
+%{__mkdir_p} %{buildroot}/%{_sysconfdir}/icapd
+%makeinstall_std CONFIGDIR=/etc/icapd
 
 
 # cleanup
@@ -81,7 +81,8 @@ rm -rf %{buildroot}
 %doc AUTHORS COPYING 
 %dir %{_libdir}/c_icap
 %dir %{_sysconfdir}
+%dir %{_sysconfdir}/icapd
 %attr(0755,root,root) %{_libdir}/c_icap/*.so
-%{_sysconfdir}/srv_clamav.conf
-%{_sysconfdir}/srv_url_check.conf
+%{_sysconfdir}/icapd/srv_clamav.conf
+%{_sysconfdir}/icapd/srv_url_check.conf
 
