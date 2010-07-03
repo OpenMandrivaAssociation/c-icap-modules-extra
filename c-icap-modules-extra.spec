@@ -3,11 +3,11 @@
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
 Version:	0.1.1
-Release:	%mkrel 0.pre2.2
+Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
 URL:		http://sourceforge.net/projects/c-icap/
-Source0:	http://prdownloads.sourceforge.net/c-icap/c_icap_modules-%{version}-pre2.tar.gz
+Source0:	http://prdownloads.sourceforge.net/c-icap/c_icap_modules-%{version}.tar.gz
 BuildRequires:	clamav-devel
 BuildRequires:  c-icap-devel
 BuildRequires:  automake1.7
@@ -24,7 +24,7 @@ An ICAP modules server coded in C
 
 %prep
 
-%setup -q -n c_icap_modules-%{version}-pre2
+%setup -q -n c_icap_modules-%{version}
 
 find . -type d -perm 0700 -exec chmod 755 {} \;
 find . -type f -perm 0555 -exec chmod 755 {} \;
