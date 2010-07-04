@@ -66,11 +66,11 @@ rm -f %{buildroot}%{_libdir}/c_icap/*.*a
 rm -f %{buildroot}%{_libdir}/*.*a
 
 %if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
+%post -p /sbin/ldconfig
 %endif
 
 %if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
+%postun  -p /sbin/ldconfig
 %endif
 
 %clean
