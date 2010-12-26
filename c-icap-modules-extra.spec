@@ -2,7 +2,7 @@
 
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
-Version:	0.1.2
+Version:	0.1.3
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
@@ -10,8 +10,8 @@ URL:		http://sourceforge.net/projects/c-icap/
 Source0:	http://prdownloads.sourceforge.net/c-icap/c_icap_modules-%{version}.tar.gz
 BuildRequires:	clamav-devel
 BuildRequires:  c-icap-devel
-BuildRequires:  automake1.7
-BuildRequires:  autoconf2.5
+BuildRequires:  automake
+BuildRequires:  autoconf
 BuildRequires:  dos2unix
 Requires:	c-icap-server
 
@@ -42,7 +42,7 @@ chmod 644 AUTHORS COPYING
 
 %build
 export WANT_AUTOCONF_2_5=1
-libtoolize --copy --force; aclocal-1.7; autoconf; automake-1.7 --foreign --add-missing --copy
+libtoolize --copy --force; aclocal; autoconf; automake --foreign --add-missing --copy
 
 export LIBS="-lpthread -ldl"
 
