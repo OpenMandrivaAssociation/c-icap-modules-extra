@@ -1,4 +1,5 @@
 %define epoch 1
+%define _disable_libtoolize 1
 
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
