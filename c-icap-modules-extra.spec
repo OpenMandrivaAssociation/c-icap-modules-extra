@@ -14,6 +14,7 @@ BuildRequires:  c-icap-devel
 BuildRequires:  automake
 BuildRequires:  autoconf
 BuildRequires:  dos2unix
+BuildRequires:	db5-devel
 Requires:	c-icap-server
 
 Epoch:		%{epoch}
@@ -51,7 +52,8 @@ export LIBS="-lpthread -ldl"
     --disable-static \
     --enable-shared \
     --with-clamav=%{_prefix} \
-    --with-c-icap=%{_prefix}
+    --with-c-icap=%{_prefix} \
+    --with-bdb
 
 %make
 
