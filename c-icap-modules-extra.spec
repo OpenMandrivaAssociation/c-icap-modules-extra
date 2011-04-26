@@ -14,7 +14,7 @@ BuildRequires:  c-icap-devel
 BuildRequires:  automake
 BuildRequires:  autoconf
 BuildRequires:  dos2unix
-BuildRequires:	db5-devel
+BuildRequires:	db5-devel 
 Requires:	c-icap-server
 
 Epoch:		%{epoch}
