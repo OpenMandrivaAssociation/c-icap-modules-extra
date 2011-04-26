@@ -4,7 +4,7 @@
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
 Version:	0.1.5
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPL
 Group:		System/Servers
 URL:		http://sourceforge.net/projects/c-icap/
@@ -86,7 +86,7 @@ rm -rf %{buildroot}
 %dir %{_sysconfdir}
 %dir %{_sysconfdir}/icapd
 %attr(0755,root,root) %{_libdir}/c_icap/*.so
-%{_sysconfdir}/icapd/srv_clamav.conf
-%{_sysconfdir}/icapd/srv_url_check.conf
+%config(noreplace) %{_sysconfdir}/icapd/srv_clamav.conf
+%config(noreplace) %{_sysconfdir}/icapd/srv_url_check.conf
 %{_sysconfdir}/icapd/srv_clamav.conf.default
 %{_sysconfdir}/icapd/srv_url_check.conf.default
