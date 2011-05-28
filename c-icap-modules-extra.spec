@@ -55,6 +55,9 @@ export LIBS="-lpthread -ldl"
     --with-c-icap=%{_prefix} \
     --with-bdb
 
+perl -pi -e 's|(srv_clamav_la_LIBADD =  -L)/usr/lib|$1%{_libdir}|;'    \
+        services/clamav/Makefile
+
 %make
 
 %install
