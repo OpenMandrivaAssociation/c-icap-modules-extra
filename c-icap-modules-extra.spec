@@ -4,7 +4,7 @@
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
 Version:	0.1.6
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		System/Servers
 URL:		http://sourceforge.net/projects/c-icap/
