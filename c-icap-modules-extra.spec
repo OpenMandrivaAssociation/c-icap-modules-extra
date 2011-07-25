@@ -4,7 +4,7 @@
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
 Version:	0.1.6
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPL
 Group:		System/Servers
 URL:		http://sourceforge.net/projects/c-icap/
@@ -71,14 +71,15 @@ rm -rf %{buildroot}
 rm -f %{buildroot}%{_libdir}/c_icap/*.*a
 rm -f %{buildroot}%{_libdir}/*.*a
 
-%if %mdkversion < 200900
-%post -p /sbin/ldconfig
-%endif
+%if "%{distribution}" == "Mandriva Linux"
+	%if %mdkversion < 200900
+	%post -p /sbin/ldconfig
+	%endif
 
-%if %mdkversion < 200900
-%postun  -p /sbin/ldconfig
+	%if %mdkversion < 200900
+	%postun  -p /sbin/ldconfig
+	%endif
 %endif
-
 %clean
 rm -rf %{buildroot}
 
