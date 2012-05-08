@@ -4,7 +4,7 @@
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
 Version:	0.1.6
-Release:	%mkrel 4
+Release:	5
 License:	GPL
 Group:		System/Servers
 URL:		http://sourceforge.net/projects/c-icap/
@@ -14,7 +14,7 @@ BuildRequires:  c-icap-devel
 BuildRequires:  automake
 BuildRequires:  autoconf
 BuildRequires:  dos2unix
-BuildRequires:	db5-devel 
+BuildRequires:	db-devel 
 Requires:	c-icap-server
 
 Epoch:		%{epoch}
