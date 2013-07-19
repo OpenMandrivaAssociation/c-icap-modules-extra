@@ -3,12 +3,12 @@
 
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
-Version:	0.1.6
-Release:	5
+Version:	0.2.4
+Release:	1
 License:	GPL
 Group:		System/Servers
 URL:		http://sourceforge.net/projects/c-icap/
-Source0:	http://prdownloads.sourceforge.net/c-icap/c_icap_modules-%{version}.tar.gz
+Source0:	http://sourceforge.net/projects/c-icap/files/c-icap-modules/0.2.x/c_icap_modules-%{version}.tar.gz
 BuildRequires:	clamav-devel
 BuildRequires:  c-icap-devel
 BuildRequires:  automake
@@ -147,4 +147,5 @@ rm -rf %{buildroot}
 * Thu Apr 29 2010 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 1:0.1.1-0.pre1.1mdv2010.1
 + Revision: 540725
 - import c-icap-modules-extra
+
 
