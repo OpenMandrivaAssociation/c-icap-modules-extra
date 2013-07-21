@@ -18,7 +18,6 @@ BuildRequires:	db-devel
 Requires:	c-icap-server
 
 Epoch:		%{epoch}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 An ICAP modules server coded in C
@@ -61,8 +60,6 @@ perl -pi -e 's|(srv_clamav_la_LIBADD =  -L)/usr/lib|$1%{_libdir}|;'    \
 %make
 
 %install
-rm -rf %{buildroot}
-
 %{__mkdir_p} %{buildroot}/%{_sysconfdir}/icapd
 %makeinstall_std CONFIGDIR=/etc/icapd
 
@@ -71,29 +68,17 @@ rm -rf %{buildroot}
 rm -f %{buildroot}%{_libdir}/c_icap/*.*a
 rm -f %{buildroot}%{_libdir}/*.*a
 
-%if "%{distribution}" == "Mandriva Linux"
-	%if %mdkversion < 200900
-	%post -p /sbin/ldconfig
-	%endif
-
-	%if %mdkversion < 200900
-	%postun  -p /sbin/ldconfig
-	%endif
-%endif
-%clean
-rm -rf %{buildroot}
-
 %files 
-%defattr(-,root,root)
 %doc AUTHORS COPYING 
 %dir %{_libdir}/c_icap
-%dir %{_sysconfdir}
 %dir %{_sysconfdir}/icapd
 %attr(0755,root,root) %{_libdir}/c_icap/*.so
-%config(noreplace) %{_sysconfdir}/icapd/srv_clamav.conf
-%config(noreplace) %{_sysconfdir}/icapd/srv_url_check.conf
-%{_sysconfdir}/icapd/srv_clamav.conf.default
-%{_sysconfdir}/icapd/srv_url_check.conf.default
+%config(noreplace) %{_sysconfdir}/icapd/*.conf
+%{_sysconfdir}/icapd/*.conf.default
+%{_datadir}/icapd/templates/virus_scan/en
+%{_datadir}/icapd/templates/srv_url_check/en
+%{_mandir}/man8/*
+
 
 
 %changelog
