@@ -75,8 +75,8 @@ rm -f %{buildroot}%{_libdir}/*.*a
 %attr(0755,root,root) %{_libdir}/c_icap/*.so
 %config(noreplace) %{_sysconfdir}/icapd/*.conf
 %{_sysconfdir}/icapd/*.conf.default
-%{_datadir}/с_icap/templates/virus_scan/en
-%{_datadir}/с_icapd/templates/srv_url_check/en
+%{_datadir}/с_icap/templates/virus_scan/en/*
+%{_datadir}/c_icap/templates/srv_url_check/en/*
 %{_mandir}/man8/*
 %{_bindir}/*
 
