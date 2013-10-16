@@ -3,7 +3,7 @@
 
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
-Version:	0.2.4
+Version:	0.2.5
 Release:	1
 License:	GPL
 Group:		System/Servers
@@ -133,5 +133,6 @@ rm -f %{buildroot}%{_libdir}/*.*a
 * Thu Apr 29 2010 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 1:0.1.1-0.pre1.1mdv2010.1
 + Revision: 540725
 - import c-icap-modules-extra
+
 
 
