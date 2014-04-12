@@ -1,0 +1,11 @@
+--- c_icap_modules-0.3.2/services/url_check/sguardDB.c.orig	2014-04-12 14:27:21.392224309 +0100
++++ c_icap_modules-0.3.2/services/url_check/sguardDB.c	2014-04-12 14:27:46.898225341 +0100
+@@ -103,7 +103,7 @@
+         dbp->set_bt_compare(dbp, bt_compare_fcn);
+ 
+ 
+-#if(DB_VERSION_MINOR>=1)
++#if(DB_VERSION_MAJOR > 4) || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 1)
+     if (otype == sgDBreadonly)
+         flags = DB_RDONLY|DB_THREAD;
+     else
