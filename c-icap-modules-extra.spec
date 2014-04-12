@@ -3,7 +3,7 @@
 
 Summary:	An ICAP module server coded in C
 Name:		c-icap-modules-extra
-Version:	0.2.5
+Version:	0.3.2
 Release:	1
 License:	GPL
 Group:		System/Servers

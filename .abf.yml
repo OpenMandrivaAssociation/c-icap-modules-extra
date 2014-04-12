@@ -1,5 +1,6 @@
 removed_sources:
   c_icap_modules-0.1.6.tar.gz: 535f203e6665320f6b2cd93697f5acdcb37c8f0d
   c_icap_modules-0.2.4.tar.gz: d563cdec9138366a2c044f2b452b3aa046fcaa5f
-sources:
   c_icap_modules-0.2.5.tar.gz: 23ac70cc4dd9ae0abe5257e5f3ff3d91da56f1ae
+sources:
+  c_icap_modules-0.3.2.tar.gz: 98dd7b3bf40b8831e297ffa8c4e1eaf7cef57cd0
