@@ -27,7 +27,7 @@ An ICAP modules server coded in C
 %prep
 
 %setup -q -n c_icap_modules-%{version}
-%apply_patches
+%autopatch -p1
 
 find . -type d -perm 0700 -exec chmod 755 {} \;
 find . -type f -perm 0555 -exec chmod 755 {} \;
