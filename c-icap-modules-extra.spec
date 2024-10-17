@@ -7,7 +7,7 @@ Version:	0.3.2
 Release:	2
 License:	GPL
 Group:		System/Servers
-URL:		http://sourceforge.net/projects/c-icap/
+URL:		https://sourceforge.net/projects/c-icap/
 Source0:	http://sourceforge.net/projects/c-icap/files/c-icap-modules/0.2.x/c_icap_modules-%{version}.tar.gz
 Patch1:		c_icap_modules-0.3.2-db.patch
 BuildRequires:	clamav-devel
